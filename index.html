@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Privacidade de Dados - Anonimização</title>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/datatables/datatables.min.css">
+    </head>
+    <body class="container-fluid" style="background-color: #DEDEDE;">
+        <section class="card card-body mt-5">
+            <h2>Anonimização</h2>
+            <hr>
+
+            <label for="type_anon">Tipo de Anonimização</label>
+            <select id="type_anon" class="form-select mt-1">
+                <option value="" selected disabled> -- Selecione --</option>
+                <option value="covid_anon01_amostra">Tipo 1</option>
+                <option value="covid_anon02_amostra">Tipo 2</option>
+                <option value="covid_anon03_amostra">Tipo 3</option>
+                <option value="covid_anon04_amostra">Tipo 4</option>
+            </select>
+
+            <div class="d-grid">
+                <button id="search" class="btn btn-dark mt-3">Buscar</button>
+            </div>
+
+            <hr>
+
+            <div id="loading" class="spinner-border d-none" role="status">
+                <span class="visually-hidden">Aguarde</span>
+            </div>
+
+            <table id="table" class="table table-striped table-hover">
+                <thead id="table_header" class="table-dark"></thead>
+                <tbody id="table_body"></tbody>
+            </table>
+        </section>
+        
+        <script
+			  src="https://code.jquery.com/jquery-3.6.1.min.js"
+			  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			  crossorigin="anonymous"></script>
+        <script src="js/datatables/language.js"></script>
+        <script src="js/datatables/datatables.min.js"></script>
+        <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/d3-fetch@3"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
